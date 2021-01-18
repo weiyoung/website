@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Navbar } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Weilcome to my weibsite
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <code>Learn React</code>
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar bg="light" variant="light" style={{ marginBottom: "40px" }}>
+        <Navbar.Brand>
+          wei2young
+        </Navbar.Brand>
+      </Navbar>
+
+      <Switch>
+        <Route path="">
+          
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
