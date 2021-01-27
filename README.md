@@ -1,3 +1,5 @@
 # Hi, my name is weiyoung
 
-:)
+design still in progress...
+
+the plan is to have a website about all aspects of me, from music to coding to philosophy...
