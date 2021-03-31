@@ -1,3 +1,3 @@
 # Hi, my name is weiyoung
 
-this would be a website with all aspects of me, from music to coding to outdoors to food to philosophy...
+who am I? why am I I?
