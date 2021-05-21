@@ -1,3 +1,7 @@
 # Hi, my name is weiyoung
 
-who am I? why am I I?
+People often ask "who am I"?
+
+I ask "what am I?", "why am I?"
+
+Who are you? How are you?
