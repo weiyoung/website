@@ -1,4 +1,4 @@
-# Welcome to my website
+# Welcome
 
 www.wei2young.com
 
