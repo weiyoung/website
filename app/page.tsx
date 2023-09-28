@@ -8,7 +8,7 @@ export default async function Home() {
     <div className="max-w-5xl mx-auto py-20">
       <h1 className="text-6xl font-extrabold">
         Hello, I'm{" "}
-        <span className="bg-gradient-to-r from-teal-700 via-sky-800 to-blue-950 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent">
           weiyoung
         </span>{" "}
         👋
@@ -22,18 +22,18 @@ export default async function Home() {
         {projects.map((project) => (
           <div
             key={project._id}
-            className="my-2 border border-gray-800 rounded-lg"
+            className="my-4 p-2 border-2 border-gray-800 rounded-lg"
           >
             {project.image && (
               <Image
                 src={project.image}
                 alt={project.name}
-                width={250}
-                height={100}
+                width={750}
+                height={300}
                 className="object-cover"
               />
             )}
-            <div className="p-3 font-extrabold bg-gradient-to-r from-teal-700 via-sky-800 to-blue-950 bg-clip-text text-transparent">
+            <div className="pt-2 px-2 font-extrabold bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent">
               {project.name}
             </div>
           </div>
