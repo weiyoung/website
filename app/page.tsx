@@ -24,7 +24,7 @@ export default async function Home() {
           <Link
             href={`/projects/${project.slug.current}`}
             key={project._id}
-            className="my-4 p-2 border-2 border-gray-800 rounded-lg"
+            className="my-4 p-2 border-2 border-gray-800 rounded-lg hover:border-blue-900 hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out"
           >
             {project.image && (
               <Image
