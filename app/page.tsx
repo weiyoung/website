@@ -8,16 +8,16 @@ export default async function Home() {
   return (
     <div className="max-w-5xl mx-auto py-20">
       <h1 className="text-6xl font-extrabold">
-        Hello, I'm{" "}
+        Hello, I&apos;m{" "}
         <span className="bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent">
           weiyoung
         </span>{" "}
         👋
       </h1>
 
-      <p className="text-xl my-6 text-gray-400">Check out my projects!</p>
+      <p className="text-l my-6 text-gray-400">Check out my projects!</p>
 
-      <h2 className="font-bold mt-12 text-gray-600">Projects</h2>
+      <h2 className="text-3xl font-bold mt-12 text-gray-400">Projects</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
@@ -32,7 +32,7 @@ export default async function Home() {
                 alt={project.name}
                 width={750}
                 height={300}
-                className="object-cover"
+                className="object-cover rounded-lg"
               />
             )}
             <div className="pt-2 px-2 font-extrabold bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent">
