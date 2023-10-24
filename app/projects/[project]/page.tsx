@@ -21,7 +21,7 @@ export default async function Project({ params }: Props) {
           title="View Project"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gray-500 rounded-lg text-gr-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-sky-200 hover:text-gray-800 transition"
+          className="bg-gray-500 rounded-lg text-gr-500 font-bold py-3 px-4 hover:bg-sky-200 hover:text-gray-800 transition"
         >
           View Project
         </a>
@@ -39,7 +39,7 @@ export default async function Project({ params }: Props) {
         alt={project.name}
         width={1920}
         height={1080}
-        className="mt-10 rounded-lg shadow-lg hover:shadow-xl transition"
+        className="mt-10 rounded-lg shadow-lg object-cover"
       />
     </div>
   )
