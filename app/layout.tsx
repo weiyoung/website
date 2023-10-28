@@ -1,11 +1,9 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-
-const inter = Inter({ subsets: ["latin"] })
+import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "wei2young",
+  title: "weiyoung",
   description: "My personal website",
 }
 
@@ -16,7 +14,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <header>
+          <Link
+            href="/"
+            className="text-3xl font-semibold bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent"
+          >
+            wei2young
+          </Link>
+        </header>
+        {children}
+      </body>
     </html>
   )
 }
