@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="max-w-3xl mx-auto p-10">
         <header>
           <Link
             href="/"
