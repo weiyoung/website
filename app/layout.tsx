@@ -23,7 +23,7 @@ export default function RootLayout({
             wei2young
           </Link>
         </header>
-        {children}
+        <main className="py-12">{children}</main>
       </body>
     </html>
   )
