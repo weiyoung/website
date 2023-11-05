@@ -1,17 +1,22 @@
 import "../globals.css"
 import type { Metadata } from "next"
 import Link from "next/link"
+import { getPages } from "@/sanity/sanity-utils"
 
 export const metadata: Metadata = {
   title: "weiyoung",
   description: "My personal website",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  // all our pages
+
+  const pages = await getPages()
+
   return (
     <html lang="en">
       <body className="max-w-3xl mx-auto p-10">
@@ -22,6 +27,14 @@ export default function RootLayout({
           >
             wei2young
           </Link>
+          <div>
+            {pages.map((page) => (
+              <Link key={page._id} href={`/${page.slug}`}>
+                {" "}
+                {page.title}{" "}
+              </Link>
+            ))}
+          </div>
         </header>
         <main className="py-12">{children}</main>
       </body>
