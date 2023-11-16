@@ -8,11 +8,7 @@ export default async function Home() {
   return (
     <div>
       <h1 className="text-6xl font-extrabold">
-        Hello, I&apos;m{" "}
-        <span className="bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent">
-          weiyoung
-        </span>{" "}
-        👋
+        Hello, I&apos;m <span className="custom-gradient">weiyoung</span> 👋
       </h1>
 
       <p className="text-l my-6 text-gray-400">Check out my projects!</p>
@@ -35,7 +31,7 @@ export default async function Home() {
                 className="object-cover rounded-lg"
               />
             )}
-            <div className="pt-2 px-2 font-extrabold bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent">
+            <div className="pt-2 px-2 font-extrabold custom-gradient">
               {project.name}
             </div>
           </Link>

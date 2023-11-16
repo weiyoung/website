@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer components {
+  .custom-gradient {
+    @apply bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent
+  }
+}
+
