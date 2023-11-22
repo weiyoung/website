@@ -25,13 +25,10 @@ export default async function Project({ params }: Props) {
         </a>
       </header>
 
-      {/* content */}
-
       <div className="text-lg text-gray-200 mt-5">
         <PortableText value={project.content} />
       </div>
 
-      {/* image */}
       <Image
         src={project.image}
         alt={project.name}
