@@ -34,7 +34,7 @@ body {
     @apply text-4xl font-bold text-gray-200
   }
   p {
-    @apply text-gray-300
+    @apply font-light text-gray-300
   }
   .custom-gradient {
     @apply bg-gradient-to-r from-teal-400 via-sky-800 to-blue-700 bg-clip-text text-transparent
