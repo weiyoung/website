@@ -21,7 +21,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className="max-w-3xl mx-auto p-10">
         <header className="flex items-center justify-between">
-          <Link href="/" className="text-3xl font-bold custom-gradient">
+          <Link href="/" className="text-3xl font-semibold custom-gradient">
             wei2young
           </Link>
           <div className="flex items-center gap-5 text-sm text-gray-300">
@@ -29,10 +29,9 @@ export default async function RootLayout({
               <Link
                 key={page._id}
                 href={`/${page.slug}`}
-                className="hover:text-blue-700"
+                className="navbar-link"
               >
-                {" "}
-                {page.title}{" "}
+                {page.title}
               </Link>
             ))}
           </div>
