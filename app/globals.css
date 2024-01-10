@@ -36,7 +36,7 @@ body {
   p {
     @apply font-light text-gray-300
   }
-  .navbar-link {
+  .navbar-links {
     @apply hover:text-teal-500
   }
   .custom-gradient {

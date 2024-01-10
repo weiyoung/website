@@ -13,8 +13,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // all our pages
-
   const pages = await getPages()
 
   return (
@@ -29,7 +27,7 @@ export default async function RootLayout({
               <Link
                 key={page._id}
                 href={`/${page.slug}`}
-                className="navbar-link"
+                className="navbar-links"
               >
                 {page.title}
               </Link>
