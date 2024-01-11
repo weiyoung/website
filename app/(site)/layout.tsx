@@ -17,23 +17,25 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="max-w-3xl mx-auto p-10">
-        <header className="flex items-center justify-between">
-          <Link href="/" className="text-3xl font-semibold custom-gradient">
-            wei2young
-          </Link>
-          <div className="flex items-center gap-5 text-sm text-gray-300">
-            {pages.map((page) => (
-              <Link
-                key={page._id}
-                href={`/${page.slug}`}
-                className="navbar-links"
-              >
-                {page.title}
-              </Link>
-            ))}
+      <body className="max-w-3xl mx-auto px-4 py-16">
+        <nav className="navbar-background">
+          <div className="navbar-content">
+            <Link href="/" className="navbar-logo">
+              wei2young
+            </Link>
+            <div className="flex items-center gap-5 text-sm text-gray-300">
+              {pages.map((page) => (
+                <Link
+                  key={page._id}
+                  href={`/${page.slug}`}
+                  className="navbar-links"
+                >
+                  {page.title}
+                </Link>
+              ))}
+            </div>
           </div>
-        </header>
+        </nav>
         <main className="py-12">{children}</main>
       </body>
     </html>
