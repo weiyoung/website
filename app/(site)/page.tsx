@@ -19,19 +19,19 @@ export default async function Home() {
           Previous SDE intern at Amazon, BlackBerry, Galvanize(now Diligent) and
           more! <br />
           <br />
-          I'm a passionate, all-rounded software developer 💻 with experience in
-          Frontend, Backend, and Mobile development!
+          I&apos;m a passionate, all-rounded software developer 💻 with
+          experience in Frontend, Backend, and Mobile development!
         </p>
       </div>
 
       <h2 className="mb-6">Projects</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="items-grid">
         {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
             key={project._id}
-            className="custom-card"
+            className="items-card"
           >
             {project.image && (
               <Image

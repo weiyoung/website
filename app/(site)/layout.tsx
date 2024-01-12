@@ -23,7 +23,7 @@ export default async function RootLayout({
             <Link href="/" className="navbar-logo">
               wei2young
             </Link>
-            <div className="flex items-center gap-5 text-sm text-gray-300">
+            <div className="flex items-center gap-6 font-light text-gray-300">
               {pages.map((page) => (
                 <Link
                   key={page._id}
