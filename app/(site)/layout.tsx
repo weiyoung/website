@@ -19,11 +19,11 @@ export default async function RootLayout({
     <html lang="en">
       <body className="max-w-3xl mx-auto px-4 py-16">
         <nav className="navbar-background">
-          <div className="navbar-content">
+          <div className="navbar">
             <Link href="/" className="navbar-logo">
               wei2young
             </Link>
-            <div className="navbar-menu">
+            <div className="navbar-content">
               {pages.map((page) => (
                 <Link
                   key={page._id}
