@@ -13,7 +13,11 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const pages = await getPages()
+  const pages = [
+    { id: 1, title: "Projects", href: "/projects" },
+    { id: 2, title: "Blog", href: "/blog" },
+    { id: 3, title: "About", href: "/about" },
+  ]
 
   return (
     <html lang="en">
@@ -25,11 +29,7 @@ export default async function RootLayout({
             </Link>
             <div className="navbar-content">
               {pages.map((page) => (
-                <Link
-                  key={page._id}
-                  href={`/${page.slug}`}
-                  className="navbar-links"
-                >
+                <Link key={page.id} href={page.href} className="navbar-links">
                   {page.title}
                 </Link>
               ))}
