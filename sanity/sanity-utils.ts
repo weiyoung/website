@@ -1,7 +1,7 @@
 import { createClient, groq } from "next-sanity"
 import { Project } from "@/types/Project"
 import clientConfig from "./config/client-config"
-import { Page } from "@/types/Page"
+import { Blog } from "@/types/Blog"
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
@@ -32,9 +32,9 @@ export async function getProject(slug: string): Promise<Project> {
   )
 }
 
-export async function getPages(): Promise<Page[]> {
+export async function getBlogs(): Promise<Blog[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "page"]{
+    groq`*[_type == "blog"]{
       _id,
       _createdAt,
       title,
@@ -43,9 +43,9 @@ export async function getPages(): Promise<Page[]> {
   )
 }
 
-export async function getPage(slug: string): Promise<Page> {
+export async function getBlog(slug: string): Promise<Blog> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "page" && slug.current == $slug][0]{
+    groq`*[_type == "blog" && slug.current == $slug][0]{
       _id,
       _createdAt,
       title,
