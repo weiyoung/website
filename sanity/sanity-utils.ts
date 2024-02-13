@@ -4,8 +4,9 @@ import clientConfig from "./config/client-config"
 import { Blog } from "@/types/Blog"
 
 export async function getProjects(): Promise<Project[]> {
+  // items are sorted by _createdAt, in descending order
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "project"] | order(_createdAt desc) {
         _id,
         _createdAt,
         name,
@@ -33,8 +34,9 @@ export async function getProject(slug: string): Promise<Project> {
 }
 
 export async function getBlogs(): Promise<Blog[]> {
+  // items are sorted by _createdAt, in descending order
   return createClient(clientConfig).fetch(
-    groq`*[_type == "blog"]{
+    groq`*[_type == "blog"] | order(_createdAt desc) {
       _id,
       _createdAt,
       title,
