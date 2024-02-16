@@ -1,7 +1,6 @@
 import "../globals.css"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { getPages } from "@/sanity/sanity-utils"
 
 export const metadata: Metadata = {
   title: "weiyoung",
