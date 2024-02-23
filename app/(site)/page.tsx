@@ -7,7 +7,6 @@ export default async function Home() {
       <h1>
         Hello, I&apos;m <span className="custom-gradient">weiyoung</span> 👋
       </h1>
-
       <div className="my-12">
         <p>
           BSc in Computer Science at The University of British Columbia in
@@ -21,12 +20,19 @@ export default async function Home() {
         </p>
       </div>
 
-      <h2 className="mb-6">Projects</h2>
+      <h2 className="mb-6">
+        <Link href={`/projects`} className="navbar-links">
+          Projects
+        </Link>{" "}
+      </h2>
 
       <ProjectsGrid limit={3} />
 
       <p>
-        Check out more projects on the<Link href={`/projects`}> Projects </Link>
+        More on my{" "}
+        <Link href={`/projects`} className="navbar-links">
+          Projects
+        </Link>{" "}
         page!
       </p>
     </>
