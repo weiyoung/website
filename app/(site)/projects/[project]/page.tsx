@@ -29,13 +29,15 @@ export default async function Project({ params }: Props) {
         <PortableText value={project.content} />
       </div>
 
-      <Image
-        src={project.image}
-        alt={project.name}
-        width={1920}
-        height={1080}
-        className="mt-10 rounded-lg shadow-lg object-cover"
-      />
+      {project.image && (
+        <Image
+          src={project.image}
+          alt={project.name}
+          width={1920}
+          height={1080}
+          className="mt-10 rounded-lg shadow-lg object-cover"
+        />
+      )}
     </div>
   )
 }
