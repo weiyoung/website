@@ -8,4 +8,5 @@ export type Project = {
   url: string
   image: string
   content: PortableTextBlock[]
+  technologies: string[]
 }

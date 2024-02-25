@@ -16,18 +16,29 @@ export default async function Project({ params }: Props) {
         <h2>{project.name}</h2>
         <a
           href={project.url}
-          title="View Project"
+          title="Project Link"
           target="_blank"
           rel="noopener noreferrer"
           className="custom-button"
         >
-          View Project
+          Project Link
         </a>
       </header>
 
       <div className="my-10">
         <PortableText value={project.content} />
       </div>
+
+      {project.technologies && (
+        <>
+          <h3>Technologies</h3>
+          <ul>
+            {project.technologies.map((tech) => (
+              <li key={tech}>{tech}</li>
+            ))}
+          </ul>
+        </>
+      )}
 
       {project.image && (
         <Image
