@@ -48,7 +48,7 @@ body {
   .items-card {
     @apply my-4 p-2 rounded-lg
     border border-neutral-200 dark:border-neutral-800
-    hover:border-teal-600 hover:scale-105 transition duration-300 ease-in-out;
+    hover:bg-neutral-100 dark:hover:bg-neutral-900 hover:scale-105 transition duration-300 ease-in-out;
   }
 
   /* custom */
@@ -59,6 +59,6 @@ body {
   .custom-button {
     @apply py-2 px-4 rounded-xl
     font-semibold bg-neutral-800 text-neutral-100 
-    hover:bg-teal-500 hover:text-neutral-900 transition duration-500 ease-in-out;
+    hover:bg-neutral-500 hover:text-neutral-900 transition duration-300 ease-in-out;
   }
 }
