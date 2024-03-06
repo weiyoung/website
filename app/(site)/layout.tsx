@@ -15,7 +15,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="max-w-3xl mx-auto px-4 py-16">
+      <body className="max-w-4xl mx-auto px-4 py-16">
         <Navbar />
         <main className="py-12">{children}</main>
         <Footer />

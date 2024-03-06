@@ -29,9 +29,7 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
               className="object-cover rounded-lg"
             />
           )}
-          <div className="pt-2 px-2 font-extrabold custom-gradient">
-            {project.name}
-          </div>
+          <div className="font-bold">{project.name}</div>
         </Link>
       ))}
     </div>

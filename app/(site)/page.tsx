@@ -4,10 +4,10 @@ import ProjectsGrid from "./components/projects-grid"
 export default async function Home() {
   return (
     <>
-      <h1>
+      <h1 className="pt-12">
         Hello, I&apos;m <span className="custom-gradient">weiyoung</span> 👋
       </h1>
-      <div className="my-12">
+      <div className="my-24">
         <p>
           BSc in Computer Science at The University of British Columbia in
           Vancouver, Canada 🇨🇦 <br />
