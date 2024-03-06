@@ -9,10 +9,7 @@ export default function Navbar() {
   return (
     <nav className="z-20 fixed w-full top-0 start-0 bg-white dark:bg-neutral-950 border-b border-neutral-200 dark:border-neutral-800">
       <div className="z-30 max-w-4xl mx-auto p-4 flex flex-wrap items-center justify-between">
-        <Link
-          href="/"
-          className="text-3xl font-semibold custom-gradient highlight-links"
-        >
+        <Link href="/" className="text-3xl font-semibold highlight-links">
           wei2young
         </Link>
         <div className="gap-6 flex items-center font-light">
