@@ -21,7 +21,7 @@ export default async function Home() {
       </div>
 
       <h2 className="mb-6">
-        <Link href={`/projects`} className="highlight-links">
+        <Link href={`/projects`} className="hover-links">
           Projects
         </Link>{" "}
       </h2>
@@ -30,7 +30,7 @@ export default async function Home() {
 
       <p>
         More on my{" "}
-        <Link href={`/projects`} className="highlight-links">
+        <Link href={`/projects`} className="hover-links">
           Projects
         </Link>{" "}
         page!
