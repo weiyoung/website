@@ -29,12 +29,11 @@ export default async function Project({ params }: Props) {
         <PortableText value={project.content} />
       </div>
 
-      {project.technologies && (
+      {project.tags && (
         <>
-          <h3>Technologies</h3>
           <ul>
-            {project.technologies.map((tech) => (
-              <li key={tech}>{tech}</li>
+            {project.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
             ))}
           </ul>
         </>
