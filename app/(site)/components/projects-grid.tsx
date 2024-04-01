@@ -26,7 +26,7 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
               alt={project.name}
               width={750}
               height={300}
-              className="object-cover rounded-lg"
+              className="object-cover rounded-lg my-2"
             />
           )}
           <div className="font-bold">{project.name}</div>

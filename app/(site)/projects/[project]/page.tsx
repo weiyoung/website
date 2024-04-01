@@ -31,11 +31,14 @@ export default async function Project({ params }: Props) {
 
       {project.tags && (
         <>
-          <ul>
+          <div className="flex justify-left gap-4">
             {project.tags.map((tag) => (
-              <li key={tag}>{tag}</li>
+              <div className="items-card" key={tag}>
+                {tag}
+              </div>
             ))}
-          </ul>
+          </div>
+          <ul></ul>
         </>
       )}
 
