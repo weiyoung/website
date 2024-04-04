@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa"
 import SocialsIcon from "./socials-icon"
 
 export default function Footer() {
@@ -14,6 +14,10 @@ export default function Footer() {
         <SocialsIcon
           url="mailto:weiyoung@alumni.ubc.ca"
           icon={<FaEnvelope />}
+        />
+        <SocialsIcon
+          url="https://www.instagram.com/wei2young/"
+          icon={<FaInstagram />}
         />
       </div>
       <span className="block">
