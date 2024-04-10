@@ -1,5 +1,6 @@
 import Link from "next/link"
 import ProjectsGrid from "./components/projects-grid"
+import Title from "./components/title"
 
 export default async function Home() {
   return (
@@ -7,6 +8,7 @@ export default async function Home() {
       <h1 className="pt-12">
         Hello, I&apos;m <span className="custom-gradient">weiyoung</span> 👋
       </h1>
+      <Title />
       <div className="my-24">
         <p>
           BSc in Computer Science at The University of British Columbia in
