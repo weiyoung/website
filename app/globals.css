@@ -32,7 +32,7 @@ body {
     @apply mb-8 text-4xl font-semibold;
   }
   p {
-    @apply font-light;
+    @apply font-extralight;
   }
 
   .hover-links {
