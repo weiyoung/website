@@ -5,7 +5,7 @@ import Footer from "./components/footer-components/footer"
 
 export const metadata: Metadata = {
   title: "weiyoung",
-  description: "My personal website",
+  description: "my personal website",
 }
 
 export default async function RootLayout({

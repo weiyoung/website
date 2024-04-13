@@ -6,7 +6,7 @@ export default async function Blog() {
 
   return (
     <>
-      <h2 className="mb-6">Blogs</h2>
+      <h2>Blogs</h2>
 
       <div className="items-grid">
         {blogs.map((blog) => (

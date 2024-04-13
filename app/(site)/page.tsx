@@ -22,7 +22,7 @@ export default async function Home() {
         </p>
       </div>
 
-      <h2 className="mb-6">
+      <h2>
         <Link href={`/projects`} className="hover-links">
           Projects
         </Link>{" "}

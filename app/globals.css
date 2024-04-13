@@ -26,14 +26,13 @@ body {
 @layer components {
   /* fonts */
   h1 {
-    @apply my-2 
-    text-6xl font-extrabold;
+    @apply my-2 text-6xl font-extrabold;
   }
   h2 {
-    @apply text-4xl font-semibold;
+    @apply mb-8 text-4xl font-semibold;
   }
   p {
-    @apply text-lg font-extralight;
+    @apply font-light;
   }
 
   .hover-links {
