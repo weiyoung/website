@@ -3,6 +3,42 @@ import { Project } from "@/types/Project"
 import clientConfig from "./config/client-config"
 import { Blog } from "@/types/Blog"
 
+export async function getExperiences() {
+  // items are sorted by start_date, in descending order
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "experience"] | order(start_date desc) {
+      _id,
+      _createdAt,
+      company,
+      position,
+      "slug": slug.current,
+      start_date,
+      end_date,
+      location,
+      content,
+      tags,
+    }`
+  )
+}
+
+export async function getExperience(slug: string) {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "experience" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      company,
+      position,
+      "slug": slug.current,
+      start_date,
+      end_date,
+      location,
+      content,
+      tags,
+    }`,
+    { slug }
+  )
+}
+
 export async function getProjects(): Promise<Project[]> {
   // items are sorted by _createdAt, in descending order
   return createClient(clientConfig).fetch(
