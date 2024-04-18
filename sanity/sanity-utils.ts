@@ -2,8 +2,9 @@ import { createClient, groq } from "next-sanity"
 import { Project } from "@/types/Project"
 import clientConfig from "./config/client-config"
 import { Blog } from "@/types/Blog"
+import { Experience } from "@/types/Experience"
 
-export async function getExperiences() {
+export async function getExperiences(): Promise<Experience[]> {
   // items are sorted by start_date, in descending order
   return createClient(clientConfig).fetch(
     groq`*[_type == "experience"] | order(start_date desc) {
@@ -21,7 +22,7 @@ export async function getExperiences() {
   )
 }
 
-export async function getExperience(slug: string) {
+export async function getExperience(slug: string): Promise<Experience> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "experience" && slug.current == $slug][0]{
       _id,

@@ -2,6 +2,7 @@ import Link from "next/link"
 
 export default function Navbar() {
   const pages = [
+    { id: 0, title: "Experiences", href: "/experiences" },
     { id: 1, title: "Projects", href: "/projects" },
     { id: 2, title: "Blog", href: "/blog" },
     { id: 3, title: "About", href: "/about" },
