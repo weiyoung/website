@@ -21,23 +21,6 @@ export async function getExperiences(): Promise<Experience[]> {
   )
 }
 
-export async function getExperience(slug: string): Promise<Experience> {
-  return createClient(clientConfig).fetch(
-    groq`*[_type == "experience" && slug.current == $slug][0]{
-      _id,
-      _createdAt,
-      company,
-      position,
-      start_date,
-      end_date,
-      location,
-      content,
-      tags,
-    }`,
-    { slug }
-  )
-}
-
 export async function getProjects(): Promise<Project[]> {
   // items are sorted by _createdAt, in descending order
   return createClient(clientConfig).fetch(
