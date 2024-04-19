@@ -5,7 +5,6 @@ export type Experience = {
   _createdAt: Date
   company: string
   position: string
-  slug: string
   start_date: Date
   end_date: Date
   location: string

@@ -14,12 +14,6 @@ const experience = {
       type: "string",
     },
     {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: { source: "company" },
-    },
-    {
       name: "start_date",
       title: "Start Date",
       type: "date",
