@@ -39,15 +39,16 @@ body {
     @apply hover:text-teal-500 transition duration-300 ease-in-out;
   }
 
-  /* grids */
+  /* display items */
   .items-grid {
-    @apply gap-4
-    grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+    @apply gap-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
   }
   .items-card {
     @apply my-4 py-2 px-4 rounded-lg
-    border border-neutral-200 dark:border-neutral-800
-    hover:bg-neutral-100 dark:hover:bg-neutral-900 hover:scale-105 transition duration-300 ease-in-out;
+    border border-neutral-200 dark:border-neutral-800;
+  }
+  .items-card-hover {
+    @apply hover:bg-neutral-100 dark:hover:bg-neutral-900 hover:scale-105 transition duration-300 ease-in-out;
   }
 
   /* custom */

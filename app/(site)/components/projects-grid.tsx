@@ -18,7 +18,7 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
         <Link
           href={`/projects/${project.slug}`}
           key={project._id}
-          className="items-card"
+          className="items-card items-card-hover"
         >
           {project.image && (
             <Image

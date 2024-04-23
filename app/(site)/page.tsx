@@ -1,4 +1,5 @@
 import Link from "next/link"
+import ExperiencesList from "./components/experiences-list"
 import ProjectsGrid from "./components/projects-grid"
 import Title from "./components/title"
 
@@ -23,13 +24,18 @@ export default async function Home() {
       </div>
 
       <h2>
+        <Link href={`/experiences`} className="hover-links">
+          Experiences
+        </Link>
+      </h2>
+      <ExperiencesList />
+
+      <h2>
         <Link href={`/projects`} className="hover-links">
           Projects
-        </Link>{" "}
+        </Link>
       </h2>
-
       <ProjectsGrid limit={3} />
-
       <p>
         More on my{" "}
         <Link href={`/projects`} className="hover-links">
