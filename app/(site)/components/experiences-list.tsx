@@ -1,12 +1,17 @@
 import { getExperiences } from "@/sanity/sanity-utils"
 import { PortableText } from "@portabletext/react"
 
-export default async function ExperiencesList() {
+type ExperienceListProps = {
+  limit?: number
+}
+export default async function ExperiencesList({ limit }: ExperienceListProps) {
   const experiences = await getExperiences()
+
+  const displayedExperiences = limit ? experiences.slice(0, limit) : experiences
 
   return (
     <div>
-      {experiences.map((experience) => (
+      {displayedExperiences.map((experience) => (
         <div key={experience._id} className="items-card">
           <div>{experience.company}</div>
           <div>{experience.position}</div>

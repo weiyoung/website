@@ -6,6 +6,7 @@ import Title from "./components/title"
 export default async function Home() {
   return (
     <>
+      {/* Intro */}
       <h1 className="pt-12">
         Hello, I&apos;m <span className="custom-gradient">weiyoung</span> 👋
       </h1>
@@ -23,13 +24,15 @@ export default async function Home() {
         </p>
       </div>
 
+      {/* Experiences */}
       <h2>
         <Link href={`/experiences`} className="hover-links">
           Experiences
         </Link>
       </h2>
-      <ExperiencesList />
+      <ExperiencesList limit={3} />
 
+      {/* Projects */}
       <h2>
         <Link href={`/projects`} className="hover-links">
           Projects
@@ -43,6 +46,10 @@ export default async function Home() {
         </Link>{" "}
         page!
       </p>
+
+      {/* Blog */}
+
+      {/* About */}
     </>
   )
 }
