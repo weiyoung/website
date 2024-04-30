@@ -17,11 +17,17 @@ const experience = {
       name: "start_date",
       title: "Start Date",
       type: "date",
+      options: {
+        dateFormat: "MMM YYYY",
+      },
     },
     {
       name: "end_date",
       title: "End Date",
       type: "date",
+      options: {
+        dateFormat: "MMM YYYY",
+      },
     },
     {
       name: "location",
