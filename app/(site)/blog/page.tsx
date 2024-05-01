@@ -13,11 +13,9 @@ export default async function Blog() {
           <Link
             href={`/blog/${blog.slug}`}
             key={blog._id}
-            className="items-card"
+            className="items-card items-card-hover"
           >
-            <div className="pt-2 px-2 font-extrabold custom-gradient">
-              {blog.title}
-            </div>
+            {blog.title}
           </Link>
         ))}
       </div>

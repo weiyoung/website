@@ -14,14 +14,8 @@ export default async function Project({ params }: Props) {
     <div>
       <header className="flex items-center justify-between">
         <h2>{project.name}</h2>
-        <a
-          href={project.url}
-          title="Project Link"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="custom-button"
-        >
-          Project Link
+        <a href={project.url} target="_blank" className="custom-button">
+          Project URL
         </a>
       </header>
 
