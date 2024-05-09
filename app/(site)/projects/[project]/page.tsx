@@ -39,7 +39,7 @@ export default async function Project({ params }: Props) {
           alt={project.name}
           width={1920}
           height={1080}
-          className="mt-10 rounded-lg shadow-lg object-cover"
+          className="mt-12 rounded-lg object-cover"
         />
       )}
     </div>
