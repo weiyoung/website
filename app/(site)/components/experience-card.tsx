@@ -10,10 +10,7 @@ export default function ExperienceCard(experience: Experience) {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
   return (
-    <div
-      key={experience._id}
-      className="items-card hover:bg-neutral-100 dark:hover:bg-neutral-900 transition duration-300 ease-in-out"
-    >
+    <div className="items-card items-card-hover">
       <section className="w-full flex justify-between" {...getToggleProps()}>
         <div>
           <p className="text-xl font-semibold">{experience.company}</p>
@@ -33,9 +30,9 @@ export default function ExperienceCard(experience: Experience) {
             {moment(experience.end_date).format("MMM YYYY")}
           </div>
         </div>
-        <p>
+        <div>
           <PortableText value={experience.content} />
-        </p>
+        </div>
         {experience.tags && (
           <div className="flex justify-left gap-4">
             {experience.tags.map((tag) => (

@@ -8,7 +8,7 @@ export default async function Blog() {
     <>
       <h2>Blogs</h2>
 
-      <div className="items-grid">
+      <div className="w-full">
         {blogs.map((blog) => (
           <Link
             href={`/blog/${blog.slug}`}
