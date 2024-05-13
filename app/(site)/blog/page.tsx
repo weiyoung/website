@@ -1,24 +1,10 @@
-import { getBlogs } from "@/sanity/sanity-utils"
-import Link from "next/link"
+import BlogPosts from "../components/blog-posts"
 
-export default async function Blog() {
-  const blogs = await getBlogs()
-
+export default function Blog() {
   return (
     <>
       <h2>Blogs</h2>
-
-      <div className="w-full">
-        {blogs.map((blog) => (
-          <Link
-            href={`/blog/${blog.slug}`}
-            key={blog._id}
-            className="items-card items-card-hover"
-          >
-            {blog.title}
-          </Link>
-        ))}
-      </div>
+      <BlogPosts />
     </>
   )
 }

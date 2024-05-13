@@ -22,10 +22,10 @@ export default function ExperiencesList({ limit }: ExperienceListProps) {
   const displayedExperiences = limit ? experiences.slice(0, limit) : experiences
 
   return (
-    <div>
+    <>
       {displayedExperiences.map((experience) => (
         <ExperienceCard key={experience._id} {...experience} />
       ))}
-    </div>
+    </>
   )
 }

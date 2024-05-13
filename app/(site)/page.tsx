@@ -1,9 +1,10 @@
 import Link from "next/link"
+import Title from "./components/title"
 import ExperiencesList from "./components/experiences-list"
 import ProjectsGrid from "./components/projects-grid"
-import Title from "./components/title"
+import BlogPosts from "./components/blog-posts"
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
       {/* Intro */}
@@ -37,7 +38,7 @@ export default async function Home() {
             Experiences
           </Link>
         </h2>
-        <ExperiencesList limit={3} />
+        <ExperiencesList limit={5} />
       </section>
 
       {/* Projects */}
@@ -49,15 +50,26 @@ export default async function Home() {
         </h2>
         <ProjectsGrid limit={3} />
         <p>
-          More on my{" "}
           <Link href={`/projects`} className="hover-links">
-            Projects
-          </Link>{" "}
-          page!
+            More on my Projects page!
+          </Link>
         </p>
       </section>
 
       {/* Blog */}
+      <section className="my-24">
+        <h2>
+          <Link href={`/blog`} className="hover-links">
+            Blog
+          </Link>
+        </h2>
+        <BlogPosts limit={3} />
+        <p>
+          <Link href={`/blog`} className="hover-links">
+            More on my Blog page!
+          </Link>
+        </p>
+      </section>
 
       {/* About */}
     </>
