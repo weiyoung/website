@@ -30,8 +30,6 @@ export async function getProjects(): Promise<Project[]> {
         name,
         "slug": slug.current,
         "image": image.asset->url,
-        url,
-        content,
         tags,
     }`
   )
@@ -60,7 +58,9 @@ export async function getBlogs(): Promise<Blog[]> {
       _id,
       _createdAt,
       title,
-      "slug": slug.current
+      "slug": slug.current,
+      date,
+      tags,
     }`
   )
 }
@@ -72,7 +72,9 @@ export async function getBlog(slug: string): Promise<Blog> {
       _createdAt,
       title,
       "slug": slug.current,
-      content
+      date,
+      content,
+      tags,
     }`,
     { slug }
   )

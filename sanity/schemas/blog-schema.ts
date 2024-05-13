@@ -18,10 +18,21 @@ const blog = {
       },
     },
     {
+      name: "date",
+      title: "Date",
+      type: "date",
+    },
+    {
       name: "content",
       title: "Content",
       type: "array",
       of: [{ type: "block" }],
+    },
+    {
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [{ type: "string" }],
     },
   ],
 }

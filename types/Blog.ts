@@ -5,5 +5,7 @@ export type Blog = {
   _createdAt: string
   title: string
   slug: string
+  date: string
   content: PortableTextBlock[]
+  tags: string[]
 }
