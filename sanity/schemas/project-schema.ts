@@ -15,6 +15,11 @@ const project = {
       options: { source: "name" },
     },
     {
+      name: "subtitle",
+      title: "Subtitle",
+      type: "string",
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",
@@ -25,6 +30,22 @@ const project = {
       name: "url",
       title: "URL",
       type: "url",
+    },
+    {
+      name: "start_date",
+      title: "Start Date",
+      type: "date",
+      options: {
+        dateFormat: "MMM YYYY",
+      },
+    },
+    {
+      name: "end_date",
+      title: "End Date",
+      type: "date",
+      options: {
+        dateFormat: "MMM YYYY",
+      },
     },
     {
       name: "content",

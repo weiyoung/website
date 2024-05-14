@@ -5,8 +5,11 @@ export type Project = {
   _createdAt: Date
   name: string
   slug: string
-  url: string
+  subtitle: string
   image: string
+  url: string
+  start_date: Date
+  end_date: Date
   content: PortableTextBlock[]
   tags: string[]
 }
