@@ -10,7 +10,7 @@ export default function Home() {
       {/* Intro */}
       <section className="my-24">
         <h1>
-          Hello, I&apos;m{" "}
+          hello, i&apos;m{" "}
           <span className="bg-gradient-to-r from-teal-400 via-sky-800 to-blue-900 bg-clip-text text-transparent">
             weiyoung
           </span>{" "}

@@ -29,7 +29,7 @@ body {
     @apply my-2 text-6xl font-extrabold;
   }
   h2 {
-    @apply my-8 text-4xl font-semibold;
+    @apply my-8 text-2xl font-semibold;
   }
   p {
     @apply font-extralight;

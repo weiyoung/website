@@ -8,7 +8,7 @@ export default function SocialsIcon({
   icon: JSX.Element
 }) {
   return (
-    <Link href={url} target="_blank" className="m-4 text-lg hover-links">
+    <Link href={url} target="_blank" className="m-4 text-xl hover-links">
       {icon}
     </Link>
   )

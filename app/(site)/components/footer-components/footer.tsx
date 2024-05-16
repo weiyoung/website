@@ -4,7 +4,7 @@ import SocialsIcon from "./socials-icon"
 export default function Footer() {
   return (
     <footer className="my-8 block text-sm text-center">
-      Connect with me:
+      connect with me:
       <div className="flex justify-center">
         <SocialsIcon url="https://github.com/weiyoung" icon={<FaGithub />} />
         <SocialsIcon

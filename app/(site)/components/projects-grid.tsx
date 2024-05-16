@@ -9,7 +9,7 @@ type ProjectsGridProps = {
 export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
   const projects = await getProjects()
 
-  // If limit is specified, slice the projects array to the limit
+  // If limit is specified, slice the projects array to only show {limit} number of projects
   const displayedProjects = limit ? projects.slice(0, limit) : projects
 
   return (

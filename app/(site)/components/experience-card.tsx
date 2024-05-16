@@ -13,8 +13,8 @@ export default function ExperienceCard(experience: Experience) {
     <div className="items-card items-card-hover">
       <section className="w-full flex justify-between" {...getToggleProps()}>
         <div>
-          <p className="text-xl font-semibold">{experience.company}</p>
-          <p className="text-lg">{experience.position}</p>
+          <p className="text-lg font-semibold">{experience.company}</p>
+          <p>{experience.position}</p>
         </div>
         <div className="flex items-center text-xl">
           {isExpanded ? <FaAngleUp /> : <FaAngleDown />}
