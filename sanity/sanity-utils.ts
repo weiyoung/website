@@ -1,8 +1,8 @@
 import { createClient, groq } from "next-sanity"
-import { Project } from "@/types/Project"
 import clientConfig from "./config/client-config"
-import { Blog } from "@/types/Blog"
 import { Experience } from "@/types/Experience"
+import { Project } from "@/types/Project"
+import { Blog } from "@/types/Blog"
 
 export async function getExperiences(): Promise<Experience[]> {
   // items are sorted by start_date, in descending order
@@ -22,15 +22,16 @@ export async function getExperiences(): Promise<Experience[]> {
 }
 
 export async function getProjects(): Promise<Project[]> {
-  // items are sorted by _createdAt, in descending order
+  // items are sorted by end_date, in descending order
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project"] | order(_createdAt desc) {
+    groq`*[_type == "project"] | order(end_date desc) {
         _id,
         _createdAt,
         name,
         "slug": slug.current,
         subtitle,
         "image": image.asset->url,
+        end_date,
     }`
   )
 }
@@ -55,9 +56,9 @@ export async function getProject(slug: string): Promise<Project> {
 }
 
 export async function getBlogs(): Promise<Blog[]> {
-  // items are sorted by _createdAt, in descending order
+  // items are sorted by date, in descending order
   return createClient(clientConfig).fetch(
-    groq`*[_type == "blog"] | order(_createdAt desc) {
+    groq`*[_type == "blog"] | order(date desc) {
       _id,
       _createdAt,
       title,
