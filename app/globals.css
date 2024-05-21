@@ -26,7 +26,7 @@ body {
 @layer components {
   /* fonts */
   h1 {
-    @apply my-2 text-6xl font-extrabold;
+    @apply my-2 text-6xl font-extrabold leading-tight;
   }
   h2 {
     @apply my-8 text-2xl font-semibold;
