@@ -10,7 +10,7 @@ export default function ExperienceCard(experience: Experience) {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
   return (
-    <div className="items-card items-card-hover">
+    <div className="items-card items-card-hover my-4">
       <section className="w-full flex justify-between" {...getToggleProps()}>
         <div>
           <p className="text-lg font-semibold">{experience.company}</p>

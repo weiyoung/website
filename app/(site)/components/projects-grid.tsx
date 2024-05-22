@@ -18,7 +18,7 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
         <Link
           href={`/projects/${project.slug}`}
           key={project._id}
-          className="items-card items-card-hover hover:scale-105"
+          className="items-card items-card-hover"
         >
           <div className="font-semibold">{project.name}</div>
           <div>{project.subtitle}</div>
@@ -28,6 +28,7 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
               alt={project.name}
               width={750}
               height={300}
+              priority
               className="object-cover rounded-lg my-2"
             />
           )}

@@ -16,7 +16,7 @@ export default async function BlogPosts({ limit }: BlogProps) {
         <Link
           href={`/blog/${blog.slug}`}
           key={blog._id}
-          className="w-full block items-card items-card-hover"
+          className="w-full block items-card items-card-hover my-4"
         >
           {blog.title}
         </Link>
