@@ -9,14 +9,16 @@ export default function Home() {
     <>
       {/* Intro */}
       <section className="my-24">
-        <h1>
-          hello, i&apos;m{" "}
-          <span className="bg-gradient-to-r from-teal-400 via-sky-800 to-blue-900 bg-clip-text text-transparent">
-            weiyoung
-          </span>{" "}
-          👋
-        </h1>
-        <Title />
+        <div className="mt-36 mb-48">
+          <h1>
+            hello, i&apos;m{" "}
+            <span className="bg-gradient-to-r from-teal-400 via-sky-800 to-blue-800 bg-clip-text text-transparent">
+              weiyoung
+            </span>{" "}
+            👋
+          </h1>
+          <Title />
+        </div>
         <div className="my-20">
           <p>
             BSc in Computer Science at The University of British Columbia in
