@@ -3,6 +3,7 @@ import Title from "./components/title"
 import ExperiencesList from "./components/experiences-list"
 import ProjectsGrid from "./components/projects-grid"
 import BlogPosts from "./components/blog-posts"
+import AboutMe from "./components/about-me"
 
 export default function Home() {
   return (
@@ -80,6 +81,7 @@ export default function Home() {
             about me
           </Link>
         </h2>
+        <AboutMe />
       </section>
     </>
   )
