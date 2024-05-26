@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div>
-      <h2>About Me</h2>
+      <h2>about me</h2>
       <p>
         I&apos;m Weiyoung Tan, an avid learner with a growth mindset. <br />
         <br />

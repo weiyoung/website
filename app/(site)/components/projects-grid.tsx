@@ -13,7 +13,7 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
   const displayedProjects = limit ? projects.slice(0, limit) : projects
 
   return (
-    <div className="items-grid">
+    <div className="items-grid mb-4">
       {displayedProjects.map((project) => (
         <Link
           href={`/projects/${project.slug}`}

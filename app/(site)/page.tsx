@@ -37,23 +37,23 @@ export default function Home() {
       <section className="my-24">
         <h2>
           <Link href={`/experiences`} className="hover-links">
-            Experiences
+            experiences
           </Link>
         </h2>
-        <ExperiencesList limit={5} />
+        <ExperiencesList />
       </section>
 
       {/* Projects */}
       <section className="my-24">
         <h2>
           <Link href={`/projects`} className="hover-links">
-            Projects
+            projects
           </Link>
         </h2>
         <ProjectsGrid limit={3} />
         <p>
           <Link href={`/projects`} className="hover-links">
-            More on my Projects page!
+            more on my projects page
           </Link>
         </p>
       </section>
@@ -62,18 +62,25 @@ export default function Home() {
       <section className="my-24">
         <h2>
           <Link href={`/blog`} className="hover-links">
-            Blog
+            blog
           </Link>
         </h2>
         <BlogPosts limit={3} />
         <p>
           <Link href={`/blog`} className="hover-links">
-            More on my Blog page!
+            more on my blog page
           </Link>
         </p>
       </section>
 
       {/* About */}
+      <section className="my-24">
+        <h2>
+          <Link href={`/about`} className="hover-links">
+            about me
+          </Link>
+        </h2>
+      </section>
     </>
   )
 }
