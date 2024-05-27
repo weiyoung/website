@@ -24,9 +24,9 @@ export default async function Project({ params }: Props) {
       </div>
 
       {project.tags && (
-        <div className="flex justify-left gap-4">
+        <div className="tags-flexbox">
           {project.tags.map((tag) => (
-            <div className="items-card" key={tag}>
+            <div className="tags" key={tag}>
               {tag}
             </div>
           ))}

@@ -20,8 +20,8 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
           key={project._id}
           className="items-card items-card-hover"
         >
-          <div className="font-semibold">{project.name}</div>
-          <div>{project.subtitle}</div>
+          <p className="text-lg font-semibold">{project.name}</p>
+          <p>{project.subtitle}</p>
           {project.image && (
             <Image
               src={project.image}

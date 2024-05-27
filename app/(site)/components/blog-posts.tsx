@@ -18,7 +18,17 @@ export default async function BlogPosts({ limit }: BlogProps) {
           key={blog._id}
           className="w-full block items-card items-card-hover my-4"
         >
-          {blog.title}
+          <p className="text-lg font-semibold">{blog.title}</p>
+          <p>{blog.date}</p>
+          {blog.tags && (
+            <div className="tags-flexbox">
+              {blog.tags.map((tag) => (
+                <div className="tags" key={tag}>
+                  {tag}
+                </div>
+              ))}
+            </div>
+          )}
         </Link>
       ))}
     </>

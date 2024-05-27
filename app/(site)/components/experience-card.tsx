@@ -30,13 +30,13 @@ export default function ExperienceCard(experience: Experience) {
             {moment(experience.end_date).format("MMM YYYY")}
           </div>
         </div>
-        <div>
+        <div className="my-4">
           <PortableText value={experience.content} />
         </div>
         {experience.tags && (
-          <div className="flex justify-left gap-4">
+          <div className="tags-flexbox">
             {experience.tags.map((tag) => (
-              <div className="items-card" key={tag}>
+              <div className="tags" key={tag}>
                 {tag}
               </div>
             ))}
