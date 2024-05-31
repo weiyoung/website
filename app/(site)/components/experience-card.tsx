@@ -13,7 +13,7 @@ export default function ExperienceCard(experience: Experience) {
     <div className="items-card items-card-hover my-4">
       <section className="w-full flex justify-between" {...getToggleProps()}>
         <div>
-          <p className="text-lg font-semibold">{experience.company}</p>
+          <h3>{experience.company}</h3>
           <p>{experience.position}</p>
         </div>
         <div className="flex items-center text-xl">

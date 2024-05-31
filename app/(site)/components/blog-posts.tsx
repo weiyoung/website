@@ -18,7 +18,7 @@ export default async function BlogPosts({ limit }: BlogProps) {
           key={blog._id}
           className="w-full block items-card items-card-hover my-4"
         >
-          <p className="text-lg font-semibold">{blog.title}</p>
+          <h3>{blog.title}</h3>
           <p>{blog.date}</p>
           {blog.tags && (
             <div className="tags-flexbox">

@@ -1,4 +1,6 @@
 import { getProject } from "@/sanity/sanity-utils"
+import { FaGithub } from "react-icons/fa"
+import moment from "moment"
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 
@@ -12,12 +14,26 @@ export default async function Project({ params }: Props) {
 
   return (
     <div>
-      <header className="flex items-center justify-between">
-        <h2>{project.name}</h2>
-        <a href={project.url} target="_blank" className="custom-button">
-          Project URL
+      <h2 className="mb-4">
+        {project.name} – {project.subtitle}
+      </h2>
+
+      <div className="mb-4">
+        {moment(project.start_date).format("MMM YYYY")}
+        {" - "}
+        {moment(project.end_date).format("MMM YYYY")}
+      </div>
+
+      <div className="flex justify-start">
+        <a
+          href={project.url}
+          target="_blank"
+          className="flex items-center custom-button"
+        >
+          <FaGithub />
+          <p className="ml-2">link to repo</p>
         </a>
-      </header>
+      </div>
 
       <div className="my-10">
         <PortableText value={project.content} />
