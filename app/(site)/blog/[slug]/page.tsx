@@ -1,4 +1,5 @@
 import { getBlog } from "@/sanity/sanity-utils"
+import moment from "moment"
 import { PortableText } from "@portabletext/react"
 
 type Props = {
@@ -9,11 +10,21 @@ export default async function Blog({ params }: Props) {
   const blog = await getBlog(params.slug)
 
   return (
-    <div>
-      <h2>{blog.title}</h2>
-      <div className="my-12">
+    <>
+      <h2 className="mb-4">{blog.title}</h2>
+      <div>{moment(blog.date).format("MMM D, YYYY")}</div>
+      <div className="my-10">
         <PortableText value={blog.content} />
       </div>
-    </div>
+      {blog.tags && (
+        <div className="tags-flexbox">
+          {blog.tags.map((tag) => (
+            <div className="tags" key={tag}>
+              {tag}
+            </div>
+          ))}
+        </div>
+      )}
+    </>
   )
 }

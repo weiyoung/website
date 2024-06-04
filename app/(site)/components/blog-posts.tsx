@@ -1,5 +1,6 @@
 import { getBlogs } from "@/sanity/sanity-utils"
 import Link from "next/link"
+import moment from "moment"
 
 type BlogProps = {
   limit?: number
@@ -19,7 +20,7 @@ export default async function BlogPosts({ limit }: BlogProps) {
           className="w-full block items-card items-card-hover my-4"
         >
           <h3>{blog.title}</h3>
-          <p>{blog.date}</p>
+          <p>{moment(blog.date).format("MMM D, YYYY")}</p>
           {blog.tags && (
             <div className="tags-flexbox">
               {blog.tags.map((tag) => (
