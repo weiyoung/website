@@ -13,27 +13,30 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
   const displayedProjects = limit ? projects.slice(0, limit) : projects
 
   return (
-    <div className="items-grid mb-4">
-      {displayedProjects.map((project) => (
-        <Link
-          href={`/projects/${project.slug}`}
-          key={project._id}
-          className="items-card items-card-hover"
-        >
-          <h3>{project.name}</h3>
-          <p>{project.subtitle}</p>
-          {project.image && (
-            <Image
-              src={project.image}
-              alt={project.name}
-              width={750}
-              height={300}
-              priority
-              className="object-cover rounded-lg my-2"
-            />
-          )}
-        </Link>
-      ))}
-    </div>
+    <>
+      <h2>Projects</h2>
+      <div className="items-grid mb-4">
+        {displayedProjects.map((project) => (
+          <Link
+            href={`/projects/${project.slug}`}
+            key={project._id}
+            className="items-card items-card-hover"
+          >
+            <h3>{project.name}</h3>
+            <p>{project.subtitle}</p>
+            {project.image && (
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={750}
+                height={300}
+                priority
+                className="object-cover rounded-lg my-2"
+              />
+            )}
+          </Link>
+        ))}
+      </div>
+    </>
   )
 }

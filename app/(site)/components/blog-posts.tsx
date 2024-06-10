@@ -13,6 +13,7 @@ export default async function BlogPosts({ limit }: BlogProps) {
 
   return (
     <>
+      <h2>Blog</h2>
       {displayedBlogPosts.map((blog) => (
         <Link
           href={`/blog/${blog.slug}`}

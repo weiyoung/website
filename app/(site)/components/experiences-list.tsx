@@ -23,6 +23,7 @@ export default function ExperiencesList({ limit }: ExperienceListProps) {
 
   return (
     <>
+      <h2>Experiences</h2>
       {displayedExperiences.map((experience) => (
         <ExperienceCard key={experience._id} {...experience} />
       ))}
