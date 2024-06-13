@@ -36,19 +36,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-24">
+      <section className="my-32" id="experiences">
         <ExperiencesList />
       </section>
 
-      <section className="my-24">
+      <section className="my-32" id="projects">
         <ProjectsGrid />
       </section>
 
-      <section className="my-24">
+      <section className="my-32" id="blog">
         <BlogPosts />
       </section>
 
-      <section className="my-24">
+      <section className="my-32" id="about">
         <AboutMe />
       </section>
     </>
