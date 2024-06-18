@@ -7,15 +7,14 @@ export default function Title() {
     <h2 className="mt-8">
       <ReactTyped
         strings={[
-          "software developer",
-          "musician",
-          "philosopher",
-          "minimalist",
-          "avid learner",
-          "compassionate leader",
-          "problem solver",
-          "passionate creator",
-          "human",
+          "a software developer",
+          "a musician",
+          "a philosopher",
+          "a minimalist",
+          "an avid learner",
+          "a compassionate leader",
+          "a problem solver",
+          "a human",
         ]}
         typeSpeed={40}
         loop
