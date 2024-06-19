@@ -35,7 +35,7 @@ body {
     @apply text-lg font-semibold;
   }
   p {
-    @apply font-extralight leading-9;
+    @apply font-extralight leading-relaxed;
   }
   .roboto-mono-500 {
     font-family: "Roboto Mono", monospace;
