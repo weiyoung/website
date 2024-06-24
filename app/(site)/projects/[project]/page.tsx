@@ -16,12 +16,12 @@ export default async function Project({ params }: Props) {
         <h2>{project.name}</h2>
         <a
           href={project.url}
-          title="View Project"
+          title="Project Link"
           target="_blank"
           rel="noopener noreferrer"
           className="custom-button"
         >
-          View Project
+          Project Link
         </a>
       </header>
 
@@ -29,13 +29,25 @@ export default async function Project({ params }: Props) {
         <PortableText value={project.content} />
       </div>
 
-      <Image
-        src={project.image}
-        alt={project.name}
-        width={1920}
-        height={1080}
-        className="mt-10 rounded-lg shadow-lg object-cover"
-      />
+      {project.tags && (
+        <>
+          <ul>
+            {project.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {project.image && (
+        <Image
+          src={project.image}
+          alt={project.name}
+          width={1920}
+          height={1080}
+          className="mt-10 rounded-lg shadow-lg object-cover"
+        />
+      )}
     </div>
   )
 }

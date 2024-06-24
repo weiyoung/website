@@ -1,17 +1,13 @@
-import { getProjects } from "@/sanity/sanity-utils"
-import Image from "next/image"
 import Link from "next/link"
+import ProjectsGrid from "./components/projects-grid"
 
 export default async function Home() {
-  const projects = await getProjects()
-
   return (
-    <div>
-      <h1>
+    <>
+      <h1 className="pt-12">
         Hello, I&apos;m <span className="custom-gradient">weiyoung</span> 👋
       </h1>
-
-      <div className="my-12">
+      <div className="my-24">
         <p>
           BSc in Computer Science at The University of British Columbia in
           Vancouver, Canada 🇨🇦 <br />
@@ -24,30 +20,21 @@ export default async function Home() {
         </p>
       </div>
 
-      <h2 className="mb-6">Projects</h2>
+      <h2 className="mb-6">
+        <Link href={`/projects`} className="hover-links">
+          Projects
+        </Link>{" "}
+      </h2>
 
-      <div className="items-grid">
-        {projects.map((project) => (
-          <Link
-            href={`/projects/${project.slug}`}
-            key={project._id}
-            className="items-card"
-          >
-            {project.image && (
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={750}
-                height={300}
-                className="object-cover rounded-lg"
-              />
-            )}
-            <div className="pt-2 px-2 font-extrabold custom-gradient">
-              {project.name}
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
+      <ProjectsGrid limit={3} />
+
+      <p>
+        More on my{" "}
+        <Link href={`/projects`} className="hover-links">
+          Projects
+        </Link>{" "}
+        page!
+      </p>
+    </>
   )
 }
