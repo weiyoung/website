@@ -1,4 +1,5 @@
 import Link from "next/link"
+import ThemeToggle from "./theme-toggle"
 
 export default function Navbar() {
   const pages = [
@@ -19,6 +20,7 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
+        <ThemeToggle />
       </div>
     </nav>
   )
