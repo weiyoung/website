@@ -19,8 +19,10 @@ export default function Navbar() {
               {page.title}
             </Link>
           ))}
+          <div className="cursor-pointer hover-links">
+            <ThemeToggle />
+          </div>
         </div>
-        <ThemeToggle />
       </div>
     </nav>
   )
