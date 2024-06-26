@@ -1,4 +1,5 @@
 import Link from "next/link"
+import ThemeToggle from "./theme-toggle"
 
 export default function Navbar() {
   const pages = [
@@ -19,6 +20,9 @@ export default function Navbar() {
               {page.title}
             </Link>
           ))}
+          <div className="cursor-pointer hover-links">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </nav>
