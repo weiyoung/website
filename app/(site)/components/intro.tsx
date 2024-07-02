@@ -1,11 +1,9 @@
 export default function Intro() {
   return (
-    <p className="leading-9">
-      All-rounded <b>software developer</b> 💻 based in Vancouver, Canada 🇨🇦
-      <br />
-      Avid learner with a <b>growth mindset</b> 🌱, always looking to learn new
-      things 🤓
-      <br />I enjoy music 🎹, gym 💪, outdoors ⛰️, food 😋, and philosophy 🤓
-    </p>
+    <h3 className="leading-9 font-medium">
+      I&apos;m a passionate, all-rounded software developer with 2+ years of
+      experience in Frontend, Backend, and Mobile development, currently looking
+      for new opportunities.
+    </h3>
   )
 }

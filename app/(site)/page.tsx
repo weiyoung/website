@@ -19,7 +19,7 @@ export default function Home() {
           </h1>
           <Title />
         </div>
-        <div className="my-20">
+        <div className="my-20 pr-8 md:pr-24">
           <Intro />
         </div>
       </section>
