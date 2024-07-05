@@ -30,7 +30,7 @@ export default function ExperienceCard(experience: Experience) {
             {moment(experience.end_date).format("MMM YYYY")}
           </div>
         </div>
-        <div className="my-4">
+        <div className="my-2">
           <PortableText value={experience.content} />
         </div>
         {experience.tags && (

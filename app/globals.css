@@ -61,7 +61,7 @@ body {
     @apply flex flex-wrap justify-start gap-2 my-2;
   }
   .tags {
-    @apply py-1 px-2 rounded-md roboto-mono-500 text-sm
+    @apply py-1 px-2 rounded-md roboto-mono-500 text-xs
     border border-neutral-200 dark:border-neutral-800
     bg-white dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400;
   }
