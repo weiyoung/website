@@ -70,4 +70,7 @@ body {
     bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 
     transition duration-300 ease-in-out;
   }
+  .content-panel {
+    @apply max-w-2xl mx-auto;
+  }
 }

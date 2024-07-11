@@ -14,7 +14,7 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
 
   return (
     <>
-      <h2>Projects</h2>
+      <h2 className="mx-4">Projects</h2>
       <div className="items-grid mb-4">
         {displayedProjects.map((project) => (
           <Link

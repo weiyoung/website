@@ -10,8 +10,8 @@ export default async function Blog({ params }: Props) {
   const blog = await getBlog(params.slug)
 
   return (
-    <>
-      <h2 className="mb-4">{blog.title}</h2>
+    <div className="content-panel">
+      <h2 className="mb-10 mx-0">{blog.title}</h2>
       <div>{moment(blog.date).format("MMM D, YYYY")}</div>
       <div className="my-10">
         <PortableText value={blog.content} />
@@ -25,6 +25,6 @@ export default async function Blog({ params }: Props) {
           ))}
         </div>
       )}
-    </>
+    </div>
   )
 }

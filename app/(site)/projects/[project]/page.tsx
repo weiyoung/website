@@ -13,7 +13,7 @@ export default async function Project({ params }: Props) {
   const project = await getProject(slug)
 
   return (
-    <div>
+    <div className="content-panel">
       <h2 className="mb-4">
         {project.name} – {project.subtitle}
       </h2>

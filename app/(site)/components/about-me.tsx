@@ -1,8 +1,8 @@
 export default function AboutMe() {
   return (
     <>
-      <h2>About Me</h2>
-      <p className="px-2">
+      <h2 className="mx-4">About Me</h2>
+      <p className="mx-4">
         Hey! My name is Weiyoung (pronounced &#34;way-young&#34;, I sometimes go
         by the alias &#34;wei2young&#34;).
         <br />
