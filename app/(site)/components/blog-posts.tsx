@@ -21,7 +21,7 @@ export default async function BlogPosts({ limit }: BlogProps) {
           className="w-full block items-card items-card-hover my-4"
         >
           <h3>{blog.title}</h3>
-          <p>{moment(blog.date).format("MMM D, YYYY")}</p>
+          <div className="date">{moment(blog.date).format("MMM D, YYYY")}</div>
           {blog.tags && (
             <div className="tags-flexbox">
               {blog.tags.map((tag) => (

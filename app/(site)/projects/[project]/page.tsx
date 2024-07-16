@@ -18,7 +18,7 @@ export default async function Project({ params }: Props) {
         {project.name} – {project.subtitle}
       </h2>
 
-      <div className="mb-4">
+      <div className="mb-4 date">
         {moment(project.start_date).format("MMM YYYY")}
         {" - "}
         {moment(project.end_date).format("MMM YYYY")}

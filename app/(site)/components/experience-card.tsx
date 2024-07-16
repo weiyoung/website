@@ -24,7 +24,7 @@ export default function ExperienceCard(experience: Experience) {
       <section {...getCollapseProps()}>
         <div className="flex justify-between">
           <div>{experience.location}</div>
-          <div>
+          <div className="date">
             {moment(experience.start_date).format("MMM YYYY")}
             {" - "}
             {moment(experience.end_date).format("MMM YYYY")}

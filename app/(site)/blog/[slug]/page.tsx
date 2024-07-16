@@ -12,7 +12,7 @@ export default async function Blog({ params }: Props) {
   return (
     <div className="content-panel">
       <h2 className="mb-10 mx-0">{blog.title}</h2>
-      <div>{moment(blog.date).format("MMM D, YYYY")}</div>
+      <div className="date">{moment(blog.date).format("MMM D, YYYY")}</div>
       <div className="my-10">
         <PortableText value={blog.content} />
       </div>
