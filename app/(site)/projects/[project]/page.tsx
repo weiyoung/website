@@ -1,7 +1,5 @@
-import { getProject } from "@/sanity/sanity-utils"
 import { FaGithub } from "react-icons/fa"
 import moment from "moment"
-import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 
 type Props = {
@@ -9,12 +7,10 @@ type Props = {
 }
 
 export default async function Project({ params }: Props) {
-  const slug = params.project
-  const project = await getProject(slug)
 
   return (
     <div className="content-panel">
-      <h2 className="mb-4">
+      {/* <h2 className="mb-4">
         {project.name} – {project.subtitle}
       </h2>
 
@@ -57,7 +53,7 @@ export default async function Project({ params }: Props) {
           height={1080}
           className="mt-12 rounded-lg object-cover"
         />
-      )}
+      )} */}
     </div>
   )
 }

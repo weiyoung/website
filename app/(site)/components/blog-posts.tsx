@@ -1,4 +1,3 @@
-import { getBlogs } from "@/sanity/sanity-utils"
 import Link from "next/link"
 import moment from "moment"
 
@@ -7,14 +6,12 @@ type BlogProps = {
 }
 
 export default async function BlogPosts({ limit }: BlogProps) {
-  const blogs = await getBlogs()
 
-  const displayedBlogPosts = limit ? blogs.slice(0, limit) : blogs
 
   return (
     <>
       <h2 className="mx-4">Blog</h2>
-      {displayedBlogPosts.map((blog) => (
+      {/* {displayedBlogPosts.map((blog) => (
         <Link
           href={`/blog/${blog.slug}`}
           key={blog._id}
@@ -32,7 +29,7 @@ export default async function BlogPosts({ limit }: BlogProps) {
             </div>
           )}
         </Link>
-      ))}
+      ))} */}
     </>
   )
 }

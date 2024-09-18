@@ -1,20 +1,18 @@
 "use client"
 
-import { Experience } from "@/types/Experience"
 import { useCollapse } from "react-collapsed"
 import { FaAngleDown, FaAngleUp } from "react-icons/fa"
 import moment from "moment"
-import { PortableText } from "@portabletext/react"
 
-export default function ExperienceCard(experience: Experience) {
+export default function ExperienceCard() {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
   return (
     <div className="items-card items-card-hover my-4">
       <section className="w-full flex justify-between" {...getToggleProps()}>
         <div>
-          <h3>{experience.company}</h3>
-          <p>{experience.position}</p>
+          <h3>company</h3>
+          <p>position</p>
         </div>
         <div className="flex items-center text-xl">
           {isExpanded ? <FaAngleUp /> : <FaAngleDown />}
@@ -23,17 +21,17 @@ export default function ExperienceCard(experience: Experience) {
 
       <section {...getCollapseProps()}>
         <div className="flex justify-between">
-          <div>{experience.location}</div>
+          <div>location</div>
           <div className="date">
-            {moment(experience.start_date).format("MMM YYYY")}
+            {/* {moment(experience.start_date).format("MMM YYYY")}
             {" - "}
-            {moment(experience.end_date).format("MMM YYYY")}
+            {moment(experience.end_date).format("MMM YYYY")} */}
           </div>
         </div>
         <div className="my-2">
-          <PortableText value={experience.content} />
+          content
         </div>
-        {experience.tags && (
+        {/* {experience.tags && (
           <div className="tags-flexbox">
             {experience.tags.map((tag) => (
               <div className="tags" key={tag}>
@@ -41,7 +39,7 @@ export default function ExperienceCard(experience: Experience) {
               </div>
             ))}
           </div>
-        )}
+        )} */}
       </section>
     </div>
   )

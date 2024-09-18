@@ -1,22 +1,19 @@
 import Link from "next/link"
 import Image from "next/image"
-import { getProjects } from "@/sanity/sanity-utils"
 
 type ProjectsGridProps = {
   limit?: number
 }
 
 export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
-  const projects = await getProjects()
-
   // If limit is specified, slice the projects array to only show {limit} number of projects
-  const displayedProjects = limit ? projects.slice(0, limit) : projects
+  // const displayedProjects = limit ? projects.slice(0, limit) : projects
 
   return (
     <>
       <h2 className="mx-4">Projects</h2>
       <div className="items-grid mb-4">
-        {displayedProjects.map((project) => (
+        {/* {displayedProjects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
             key={project._id}
@@ -35,7 +32,7 @@ export default async function ProjectsGrid({ limit }: ProjectsGridProps) {
               />
             )}
           </Link>
-        ))}
+        ))} */}
       </div>
     </>
   )
