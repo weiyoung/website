@@ -1,11 +1,11 @@
-import "../globals.css"
+import "./globals.css"
 import type { Metadata } from "next"
 import Navbar from "./components/navbar-components/navbar"
 import Footer from "./components/footer-components/footer"
 
 export const metadata: Metadata = {
-  title: "weiyoung",
-  description: "my personal website",
+  title: "wei2young.com",
+  description: "my personal website/blog",
 }
 
 export default async function RootLayout({
