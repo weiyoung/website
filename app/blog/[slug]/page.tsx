@@ -17,7 +17,10 @@ export default function Blog({ params }: Props) {
     <div className="content-panel">
       <h2 className="mb-10">{post.data.title}</h2>
       <div className="date">{moment(post.data.date).format("MMM D, YYYY")}</div>
-      <Markdown className="my-10">{post.content}</Markdown>
+      <article className="markdown-text">
+        <Markdown className="my-10">{post.content}</Markdown>
+      </article>
+
       {post.data.tags && (
         <div className="tags-flexbox">
           {post.data.tags.map((tag: string) => (

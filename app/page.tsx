@@ -1,4 +1,4 @@
-import Title from "./components/title"
+import Title from "./components/Title"
 import Intro from "./components/Intro"
 import ExperiencesList from "./components/ExperiencesList"
 import ProjectsGrid from "./components/ProjectsGrid"

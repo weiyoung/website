@@ -1,5 +1,3 @@
-"use client"
-
 import ExperienceCard from "./ExperienceCard"
 
 type ExperienceListProps = {

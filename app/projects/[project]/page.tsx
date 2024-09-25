@@ -6,8 +6,7 @@ type Props = {
   params: { project: string }
 }
 
-export default async function Project({ params }: Props) {
-
+export default function Project({ params }: Props) {
   return (
     <div className="content-panel">
       {/* <h2 className="mb-4">
