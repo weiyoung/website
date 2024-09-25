@@ -1,9 +1,9 @@
 import Title from "./components/title"
-import Intro from "./components/intro"
-import ExperiencesList from "./components/experiences-list"
-import ProjectsGrid from "./components/projects-grid"
-import BlogPosts from "./components/blog-posts"
-import AboutMe from "./components/about-me"
+import Intro from "./components/Intro"
+import ExperiencesList from "./components/ExperiencesList"
+import ProjectsGrid from "./components/ProjectsGrid"
+import PostPreviews from "./components/PostPreviews"
+import AboutMe from "./components/AboutMe"
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
       </section>
 
       <section className="my-32" id="blog">
-        <BlogPosts />
+        <PostPreviews />
       </section>
 
       <section className="my-32" id="about">

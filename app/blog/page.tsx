@@ -1,5 +1,5 @@
-import BlogPosts from "../components/blog-posts"
+import PostPreviews from "../components/PostPreviews"
 
 export default function Blog() {
-  return <BlogPosts />
+  return <PostPreviews />
 }

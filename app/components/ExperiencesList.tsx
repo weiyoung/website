@@ -1,13 +1,11 @@
 "use client"
 
-import ExperienceCard from "./experience-card"
+import ExperienceCard from "./ExperienceCard"
 
 type ExperienceListProps = {
   limit?: number
 }
 export default function ExperiencesList({ limit }: ExperienceListProps) {
-
-
   // const displayedExperiences = limit ? experiences.slice(0, limit) : experiences
 
   return (

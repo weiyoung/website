@@ -1,7 +1,7 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import Navbar from "./components/navbar-components/navbar"
-import Footer from "./components/footer-components/footer"
+import Navbar from "./components/navbar-components/Navbar"
+import Footer from "./components/footer-components/Footer"
 
 export const metadata: Metadata = {
   title: "wei2young.com",

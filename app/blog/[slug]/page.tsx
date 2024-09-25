@@ -1,26 +1,32 @@
+import { getPost, getPostsMetadata } from "@/app/hooks/blog-hooks"
+import Markdown from "markdown-to-jsx"
 import moment from "moment"
 
 type Props = {
   params: { slug: string }
 }
 
-export default async function Blog({ params }: Props) {
+export const generateStaticParams = async () => {
+  const posts = getPostsMetadata()
+  return posts.map((post) => ({ slug: post.slug }))
+}
+
+export default function Blog({ params }: Props) {
+  const post = getPost(params.slug)
   return (
     <div className="content-panel">
-      <h2 className="mb-10 mx-0">title</h2>
-      {/* <div className="date">{moment(blog.date).format("MMM D, YYYY")}</div>
-      <div className="my-10">
-        <PortableText value={blog.content} />
-      </div>
-      {blog.tags && (
+      <h2 className="mb-10">{post.data.title}</h2>
+      <div className="date">{moment(post.data.date).format("MMM D, YYYY")}</div>
+      <Markdown className="my-10">{post.content}</Markdown>
+      {post.data.tags && (
         <div className="tags-flexbox">
-          {blog.tags.map((tag) => (
+          {post.data.tags.map((tag: string) => (
             <div className="tags" key={tag}>
               {tag}
             </div>
           ))}
         </div>
-      )} */}
+      )}
     </div>
   )
 }

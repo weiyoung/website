@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa"
-import SocialsIcon from "./socials-icon"
+import SocialsIcon from "./SocialsIcon"
 
 export default function Footer() {
   return (

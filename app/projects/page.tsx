@@ -1,4 +1,4 @@
-import ProjectsGrid from "../components/projects-grid"
+import ProjectsGrid from "../components/ProjectsGrid"
 
 export default function Projects() {
   return <ProjectsGrid />
