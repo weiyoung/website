@@ -1,10 +1,10 @@
 ---
-title: "Wisdoms from Bodybuilding"
+title: "What Bodybuilding Taught Me"
 date: "2024-05-14"
-tags: ["bodybuilding", "philosophy", "self improvement"]
+tags: ["bodybuilding", "philosophy", "personal growth"]
 ---
 
-Over the past year, many of my good habits have fallen through, but one thing I stayed committed to was bodybuilding. As I immersed myself deeper into the art of bodybuilding, I began to notice valuable insights that extend beyond the gym and into everyday life. And thus I decided to share the 8 things I learned from bodybuilding.
+Over the past year, many of my good habits have fallen through, but one thing I stayed committed to was bodybuilding. As I immersed myself deeper into the art of bodybuilding, I began to notice valuable insights that extend beyond the gym and into everyday life – and thus I decided to write about what bodybuilding has taught me.
 
 ### 1. Responsibility
 

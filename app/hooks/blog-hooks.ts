@@ -1,6 +1,7 @@
 import fs from "fs"
 import { PostMetadata } from "@/types/PostMetadata"
 import matter from "gray-matter"
+
 const BLOGS_FOLDER = "./content/blog-posts"
 
 export function getPostsMetadata(): PostMetadata[] {

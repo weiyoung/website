@@ -8,7 +8,6 @@ type Props = {
 
 export default function PostPreviews({ limit }: Props) {
   const posts = getPostsMetadata()
-
   const displayedPosts = limit ? posts.slice(0, limit) : posts
 
   return (

@@ -17,6 +17,7 @@ export default function Blog({ params }: Props) {
     <div className="content-panel">
       <h2 className="mb-10">{post.data.title}</h2>
       <div className="date">{moment(post.data.date).format("MMM D, YYYY")}</div>
+
       <article className="markdown-text">
         <Markdown className="my-10">{post.content}</Markdown>
       </article>
