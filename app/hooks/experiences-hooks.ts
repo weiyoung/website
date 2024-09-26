@@ -8,6 +8,9 @@ export function getExperiences(): Experience[] {
   const files = fs
     .readdirSync(EXPERIENCES_FOLDER)
     .filter((file) => file.endsWith(".md"))
+    .sort()
+    .reverse()
+
   const experiences = files.map((file) => {
     const content = fs.readFileSync(`${EXPERIENCES_FOLDER}/${file}`, "utf-8")
     const matterResult = matter(content)

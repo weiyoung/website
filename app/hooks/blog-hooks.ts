@@ -8,6 +8,9 @@ export function getPostsMetadata(): PostMetadata[] {
   const files = fs
     .readdirSync(BLOGS_FOLDER)
     .filter((file) => file.endsWith(".md"))
+    .sort()
+    .reverse()
+
   const postsMetadata = files.map((file) => {
     const content = fs.readFileSync(`${BLOGS_FOLDER}/${file}`, "utf-8")
     const matterResult = matter(content)
