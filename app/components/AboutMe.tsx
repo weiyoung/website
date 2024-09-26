@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <>
+    <div className="max-w-screen-md">
       <h2 className="mx-4">About Me</h2>
       <p className="mx-4">
         Hey! My name is Weiyoung (pronounced &#34;way-young&#34;, I sometimes go
@@ -60,6 +60,6 @@ export default function AboutMe() {
         </a>
         !
       </p>
-    </>
+    </div>
   )
 }
