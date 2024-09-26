@@ -1,18 +1,19 @@
 import { getPost, getPostsMetadata } from "@/app/hooks/blog-hooks"
-import Markdown from "markdown-to-jsx"
 import moment from "moment"
+import Markdown from "markdown-to-jsx"
 
 type Props = {
   params: { slug: string }
 }
 
-export const generateStaticParams = async () => {
+export async function generateStaticParams() {
   const posts = getPostsMetadata()
   return posts.map((post) => ({ slug: post.slug }))
 }
 
 export default function Blog({ params }: Props) {
   const post = getPost(params.slug)
+
   return (
     <div className="content-panel">
       <h2 className="mb-10">{post.data.title}</h2>

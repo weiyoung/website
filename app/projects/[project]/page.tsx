@@ -1,27 +1,35 @@
+import { getProject, getProjectsMetadata } from "@/app/hooks/projects-hooks"
 import { FaGithub } from "react-icons/fa"
 import moment from "moment"
-import Image from "next/image"
+import Markdown from "markdown-to-jsx"
 
 type Props = {
   params: { project: string }
 }
 
+export async function generateStaticParams() {
+  const projects = getProjectsMetadata()
+  return projects.map((project) => ({ slug: project.slug }))
+}
+
 export default function Project({ params }: Props) {
+  const project = getProject(params.project)
+
   return (
     <div className="content-panel">
-      {/* <h2 className="mb-4">
-        {project.name} – {project.subtitle}
+      <h2 className="mb-4">
+        {project.data.title} – {project.data.subtitle}
       </h2>
 
       <div className="mb-4 date">
-        {moment(project.start_date).format("MMM YYYY")}
+        {moment(project.data.start_date).format("MMM YYYY")}
         {" - "}
-        {moment(project.end_date).format("MMM YYYY")}
+        {moment(project.data.end_date).format("MMM YYYY")}
       </div>
 
       <div className="flex justify-start">
         <a
-          href={project.url}
+          href={project.data.url}
           target="_blank"
           className="flex items-center custom-button"
         >
@@ -30,29 +38,19 @@ export default function Project({ params }: Props) {
         </a>
       </div>
 
-      <div className="my-10">
-        <PortableText value={project.content} />
-      </div>
+      <article className="markdown-text">
+        <Markdown className="my-10">{project.content}</Markdown>
+      </article>
 
-      {project.tags && (
+      {project.data.tags && (
         <div className="tags-flexbox">
-          {project.tags.map((tag) => (
+          {project.data.tags.map((tag: string) => (
             <div className="tags" key={tag}>
               {tag}
             </div>
           ))}
         </div>
       )}
-
-      {project.image && (
-        <Image
-          src={project.image}
-          alt={project.name}
-          width={1920}
-          height={1080}
-          className="mt-12 rounded-lg object-cover"
-        />
-      )} */}
     </div>
   )
 }

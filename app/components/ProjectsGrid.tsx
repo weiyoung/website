@@ -1,38 +1,28 @@
+import { getProjectsMetadata } from "../hooks/projects-hooks"
 import Link from "next/link"
-import Image from "next/image"
 
-type ProjectsGridProps = {
+type Props = {
   limit?: number
 }
 
-export default function ProjectsGrid({ limit }: ProjectsGridProps) {
-  // If limit is specified, slice the projects array to only show {limit} number of projects
-  // const displayedProjects = limit ? projects.slice(0, limit) : projects
+export default function ProjectsGrid({ limit }: Props) {
+  const projects = getProjectsMetadata()
+  const displayedProjects = limit ? projects.slice(0, limit) : projects
 
   return (
     <>
       <h2 className="mx-4">Projects</h2>
       <div className="items-grid mb-4">
-        {/* {displayedProjects.map((project) => (
+        {displayedProjects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
-            key={project._id}
+            key={project.slug}
             className="items-card items-card-hover"
           >
-            <h3>{project.name}</h3>
+            <h3>{project.title}</h3>
             <p>{project.subtitle}</p>
-            {project.image && (
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={750}
-                height={300}
-                priority
-                className="object-cover rounded-lg my-2"
-              />
-            )}
           </Link>
-        ))} */}
+        ))}
       </div>
     </>
   )
