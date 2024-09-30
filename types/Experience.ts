@@ -1,13 +1,10 @@
-import { PortableTextBlock } from "sanity"
-
 export type Experience = {
-  _id: string
-  _createdAt: Date
+  slug: string
   company: string
   position: string
-  start_date: Date
-  end_date: Date
+  start_date: string
+  end_date: string
   location: string
-  content: PortableTextBlock[]
   tags: string[]
+  content: string
 }
