@@ -29,7 +29,6 @@ export function getProjectsMetadata(): ProjectMetadata[] {
 
 export function getProject(slug: string) {
   const file = `${PROJECTS_FOLDER}/${slug}.md`
-  console.log(file)
   const content = fs.readFileSync(file, "utf-8")
   return matter(content)
 }

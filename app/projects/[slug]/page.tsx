@@ -4,7 +4,7 @@ import moment from "moment"
 import Markdown from "markdown-to-jsx"
 
 type Props = {
-  params: { project: string }
+  params: { slug: string }
 }
 
 export async function generateStaticParams() {
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 }
 
 export default function Project({ params }: Props) {
-  const project = getProject(params.project)
+  const project = getProject(params.slug)
 
   return (
     <div className="content-panel">

@@ -26,7 +26,6 @@ export function getPostsMetadata(): PostMetadata[] {
 
 export function getPost(slug: string) {
   const file = `${BLOGS_FOLDER}/${slug}.md`
-  console.log(file)
   const content = fs.readFileSync(file, "utf-8")
   return matter(content)
 }
