@@ -2,7 +2,7 @@ import fs from "fs"
 import { ProjectMetadata } from "@/types/ProjectMetadata"
 import matter from "gray-matter"
 
-const PROJECTS_FOLDER = "content/projects"
+const PROJECTS_FOLDER = "./content/projects"
 
 export function getProjectsMetadata(): ProjectMetadata[] {
   const files = fs
@@ -29,6 +29,7 @@ export function getProjectsMetadata(): ProjectMetadata[] {
 
 export function getProject(slug: string) {
   const file = `${PROJECTS_FOLDER}/${slug}.md`
+  console.log(file)
   const content = fs.readFileSync(file, "utf-8")
   return matter(content)
 }
