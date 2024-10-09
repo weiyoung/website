@@ -2,7 +2,7 @@ import fs from "fs"
 import { ProjectMetadata } from "@/types/ProjectMetadata"
 import matter from "gray-matter"
 
-const PROJECTS_FOLDER = "./content/projects"
+const PROJECTS_FOLDER = "content/projects"
 
 export function getProjectsMetadata(): ProjectMetadata[] {
   const files = fs
