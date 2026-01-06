@@ -21,7 +21,7 @@ export default function Footer() {
         />
       </div>
       <span className="block">
-        <span className="mr-8">weiyoung © 2024</span>
+        <span className="mr-8">weiyoung © 2026</span>
         <a
           href="https://github.com/weiyoung/website"
           target="_blank"
